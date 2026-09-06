@@ -110,6 +110,25 @@
   .section-head{ margin-bottom: 22px; }
   .section-head h2{ font-size: 26px; font-weight:600; }
   .section-head p{ color: var(--text-mute); font-size:14px; margin-top:6px; max-width: 52ch; }
+  .fixtures-head{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:16px;
+    flex-wrap:wrap;
+  }
+  .submit-result-btn{
+    display:inline-block;
+    background: var(--pitch);
+    color: var(--paper);
+    font-size:13px;
+    font-weight:600;
+    text-decoration:none;
+    padding:10px 18px;
+    border-radius:20px;
+    white-space:nowrap;
+  }
+  .submit-result-btn:hover{ background: var(--pitch-dark); }
 
   /* Groups / standings */
   .groups{ display:grid; grid-template-columns: 1fr 1fr; gap: 28px; }
@@ -279,9 +298,12 @@
 
   <section id="fixtures">
     <div class="wrap">
-      <div class="section-head">
-        <h2>Fixtures</h2>
-        <p>Five rounds, both groups play in parallel.</p>
+      <div class="section-head fixtures-head">
+        <div>
+          <h2>Fixtures</h2>
+          <p>Five rounds, both groups play in parallel.</p>
+        </div>
+        <a class="submit-result-btn" href="https://forms.gle/N3Xb7dcyB8PSEdNK9" target="_blank" rel="noopener">Submit a result</a>
       </div>
       <div class="round-tabs" id="round-tabs"></div>
       <div class="fixture-groups" id="fixture-mount"></div>
